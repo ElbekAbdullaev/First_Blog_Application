@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+    <h1>Postni Uchirish</h1>
+        <form action="post">{% csrf_token %}    
+        <p>"{{ article.title }}" nomli postni ochirishni istaysizmi?</p>
+        <button class="btn btn-danger ml-2" type="submit">Ha</button>
+            
+{% comment %}         
+            <button class="btn btn-info ml-2" type="submit">Saqlash</button> {% endcomment %}
+        </form>
+{% endblock content %}

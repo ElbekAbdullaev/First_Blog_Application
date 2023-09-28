@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Bosh Sahifa{% endblock title %}
+{% block content %}
+    <br />
+    <div class="jumbotron">
+        <h1 class="display-4">Assalomu Aleykum!</h1>
+        <p class="lead">Welcome to Elbek Abdullaev's personal blog!</p>
+        <hr class="my-4">
+        <p>Here you can find important informations about Programming</p>
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" href="{% url 'article_list' %}" role="button">Posts</a>
+        </p>    
+    </div>    
+    {% comment %} {% if user.is_authenticated %}
+        {{ user.username | title }}
+        <p><a href="{% url 'logout' %}" class="btn btn-success">Chiqib ketish</a></p>
+
+    {% else %}
+        <p>Saytga kirmagansz</p>
+        <a href="{% url 'login' %}"><button type="submit" class="btn btn-success">Kirish</button></a>
+        <a href="{% url 'signup' %}"><button type="submit" class="btn btn-success">Ruyhatdan Utish</button></a>
+        
+
+        
+    {% endif %}    {% endcomment %}
+{% endblock content %}     
+
